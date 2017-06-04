@@ -6,7 +6,7 @@ CXXFLAGS= -std=gnu++1z -O2 -pg
 VPATH	= src
 PREFIX	= ~
 
-cpps 	= fit hist mean
+cpps 	= fit hist mean log
 shs		= loglog plot
 
 targets	= $(cpps) $(shs)

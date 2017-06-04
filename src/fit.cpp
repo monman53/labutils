@@ -17,14 +17,7 @@ int main() {
     double x, y;
     while(cin >> x >> y){
 
-        if(x <= 2){
-            continue;
-        }
-
         n++;
-
-        x = log(x);
-        y = log(y);
 
         sum_x   += x;
         sum_y   += y;
