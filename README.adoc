@@ -3,12 +3,15 @@ labutils
 
 == Requirements
 
+* bash
+* awk
 * gcc >= 5.4.0
 * gnuplot
 
 == Tools
 
-* log
+* (log)
+** use `awk '{print log{$1}}'`
 * fit
 * mean
 * hist
