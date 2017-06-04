@@ -1,0 +1,14 @@
+labutils
+========
+
+== Requirements
+
+* g++ std=gnu\+\+1z
+* gnuplot
+
+== Tools
+
+* log
+* fit
+* mean
+* hist
