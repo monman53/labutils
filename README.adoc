@@ -11,7 +11,7 @@ labutils
 == Tools
 
 * (log)
-** use `awk '{print log{$1}}'`
+** use `awk '{print log($1)}'`
 * fit
 * mean
 * hist
