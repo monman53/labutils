@@ -1,7 +1,7 @@
 .PHONY: clean install uninstall
 
 CXX		= g++ 
-CXXFLAGS= -std=gnu++1z -O2 -pg
+CXXFLAGS= -std=gnu++1z -O2
 
 VPATH	= src
 PREFIX	= ~
