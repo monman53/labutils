@@ -3,7 +3,7 @@ labutils
 
 == Requirements
 
-* g++ std=gnu++1z
+* gcc >= 5.4.0
 * gnuplot
 
 == Tools
