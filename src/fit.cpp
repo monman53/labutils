@@ -1,7 +1,4 @@
 #include <iostream>
-#include <vector>
-#include <utility>
-#include <cmath>
 using namespace std;
 
 int main() {
@@ -15,17 +12,19 @@ int main() {
     int counter = 0;
 
     double x, y;
+
     while(cin >> x >> y){
-
-        n++;
-
         sum_x   += x;
         sum_y   += y;
         sum_x2  += x*x;
         sum_xy  += x*y;
+
+        n++;
     }
 
-    cout << ((n*sum_xy - sum_x*sum_y)/(n*sum_x2 - sum_x*sum_x)) << endl;
+    double a = ((n*sum_xy - sum_x*sum_y)/(n*sum_x2 - sum_x*sum_x));
+
+    cout << a << endl;
 
     return 0;
 }

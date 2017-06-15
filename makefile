@@ -2,11 +2,12 @@
 
 CXX		= g++ 
 CXXFLAGS= -std=gnu++1z -O2
+CXXLIBS	= -lgsl -lgslcblas
 
 VPATH	= src
 PREFIX	= ~
 
-cpps 	= fit hist mean
+cpps 	= fit histo mean
 shs		= loglog plot
 
 targets	= $(cpps) $(shs)
@@ -14,7 +15,7 @@ targets	= $(cpps) $(shs)
 all: $(targets)
 
 $(cpps): %: %.cpp
-	$(CXX) $(CXXFLAGS) -o $@ $<
+	$(CXX) $(CXXFLAGS) -o $@ $< $(CXXLIBS)
 
 $(shs): %: %.sh
 	cp $< $@

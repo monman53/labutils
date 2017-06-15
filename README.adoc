@@ -6,6 +6,7 @@ labutils
 * bash
 * awk
 * gcc >= 5.4.0
+* GSL
 * gnuplot
 
 == Tools
@@ -14,4 +15,4 @@ labutils
 ** use `awk '{print log($1)}'`
 * fit
 * mean
-* hist
+* histo
