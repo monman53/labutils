@@ -13,6 +13,9 @@ int main() {
     }
 
     int n = 1 + log2(data.size());
+    double xmin = *std::min_element(data.begin(), data.end());
+    double xmax = *std::max_element(data.begin(), data.end());
+    double range = (xmax-xmin)/n;
     gsl_histogram *h = gsl_histogram_alloc(n);
     gsl_histogram_set_ranges_uniform(
             h,
@@ -22,6 +25,8 @@ int main() {
     for(auto x : data) {
         gsl_histogram_increment(h, x);
     }
+    // add max
+    gsl_histogram_increment(h, xmax - range/2);
 
     gsl_histogram_fprintf(stdout, h, "%f", "%f");
 

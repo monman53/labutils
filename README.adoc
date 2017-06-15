@@ -14,5 +14,6 @@ labutils
 * (log)
 ** use `awk '{print log($1)}'`
 * fit
-* mean
 * histo
+* mean
+* png2rgba

@@ -9,10 +9,13 @@ PREFIX	= ~
 
 cpps 	= fit histo mean
 shs		= loglog plot
+gos		= png2rgba rgba2png
 
-targets	= $(cpps) $(shs)
+
+targets	= $(cpps) $(shs) $(gos)
 
 all: $(targets)
+
 
 $(cpps): %: %.cpp
 	$(CXX) $(CXXFLAGS) -o $@ $< $(CXXLIBS)
@@ -20,11 +23,13 @@ $(cpps): %: %.cpp
 $(shs): %: %.sh
 	cp $< $@
 
+$(gos): %: %.go
+	go build -o $@ $<
+
 
 install:
 	mkdir -p $(PREFIX)/bin
 	cp $(targets) $(PREFIX)/bin/
-	
 
 uninstall:
 	mkdir -p $(PREFIX)/bin
