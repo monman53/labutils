@@ -10,9 +10,9 @@ int main() {
         data.push_back(x);
     }
 
-    double mean = gsl_stats_mean(&data[0], 1, data.size());
+    double sd = gsl_stats_sd(&data[0], 1, data.size());
 
-    std::cout << mean << std::endl;
+    std::cout << sd << std::endl;
 
     return 0;
 }

@@ -16,4 +16,5 @@ labutils
 * fit
 * histo
 * mean
+* sd
 * png2rgba
