@@ -7,7 +7,7 @@ CXXLIBS	= -lgsl -lgslcblas
 VPATH	= src
 PREFIX	= ~
 
-cpps 	= fit histo mean sd
+cpps 	= fit histo mean sd se
 gos		= png2rgba rgba2png 
 shs		= loglog plot
 

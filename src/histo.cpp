@@ -28,6 +28,10 @@ int main() {
     // add max
     gsl_histogram_increment(h, xmax - range/2);
 
+    // normalize
+    gsl_histogram_scale(h, 1.0/data.size());
+
+    // output
     gsl_histogram_fprintf(stdout, h, "%f", "%f");
 
 
